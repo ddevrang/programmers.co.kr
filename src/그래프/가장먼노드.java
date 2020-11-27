@@ -30,13 +30,13 @@ class 가장먼노드 {
 		boolean[] visited = new boolean[n + 1];
 		List<ArrayList<Integer>> listGraph = new ArrayList<>();
 
-		// == 그래프 노드별로 정보 연결할 준비.
+		// 그래프 노드별로 정보 연결할 준비.
 		// 0,1,2,3,4,...n까지 기본 노드들을 만든다.
 		for (int i = 0; i <= n; i++) {
 			listGraph.add(new ArrayList<Integer>());
 		}
 
-		// == 그래프 연결
+		// 그래프 연결
 		// [1,2] 라면
 		// listGraph.get(1).add(2) // 1번노드는 2와연결
 		// listGraph.get(2).add(1) // 2번노드는 1과연결
@@ -47,7 +47,7 @@ class 가장먼노드 {
 
 		Queue<Integer> nextQ = new LinkedList<>();
 
-		// == 1번부터 출발
+		// 1번부터 시작
 		nextQ.offer(1);
 
 		visited[1] = true;
